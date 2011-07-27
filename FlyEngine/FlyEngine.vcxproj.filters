@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{04ba0d58-34a3-4818-b903-07587be9aa9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{9d9532f4-049c-4058-b038-e10a311cd68f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General">
+      <UniqueIdentifier>{780468dc-504f-4b2e-b06c-552b028345d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{746cd515-46aa-43e9-994c-74d31b0de2b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math\Headers">
+      <UniqueIdentifier>{f69e831e-95a7-4887-b37f-b620bdd3d150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math\Source">
+      <UniqueIdentifier>{12ba06c4-123f-4bda-a54c-f0f1a361bec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\Headers">
+      <UniqueIdentifier>{fd72bd73-bfc4-4421-b2c1-98012c937774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\Source">
+      <UniqueIdentifier>{cd10a164-c5d0-4c55-958e-44dbdc8fb07f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Headers">
+      <UniqueIdentifier>{88d760ec-ffd1-4816-b393-fbed72a6dd64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Source">
+      <UniqueIdentifier>{697c8d35-5850-487e-9aa1-3922537f758a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DrawableObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Math\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Math\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHelper.h">
+      <Filter>Math\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWindow.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Math\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct3DRenderer.h">
+      <Filter>Renderer\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="headers.h">
+      <Filter>General</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DrawableObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MathHelper.cpp">
+      <Filter>Math\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Math\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Math\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWindow.cpp">
+      <Filter>Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct3DRenderer.cpp">
+      <Filter>Renderer\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Game\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
