@@ -11,7 +11,7 @@
 class Direct3DRenderer : public Renderer
 {
 private:
-
+	D3DXCOLOR clearColour;
 public:
 	Direct3DRenderer();
 	~Direct3DRenderer();

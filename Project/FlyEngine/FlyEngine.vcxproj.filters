@@ -22,26 +22,32 @@
     <Filter Include="General">
       <UniqueIdentifier>{780468dc-504f-4b2e-b06c-552b028345d9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Renderer">
-      <UniqueIdentifier>{746cd515-46aa-43e9-994c-74d31b0de2b2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Math\Headers">
       <UniqueIdentifier>{f69e831e-95a7-4887-b37f-b620bdd3d150}</UniqueIdentifier>
     </Filter>
     <Filter Include="Math\Source">
       <UniqueIdentifier>{12ba06c4-123f-4bda-a54c-f0f1a361bec6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Renderer\Headers">
-      <UniqueIdentifier>{fd72bd73-bfc4-4421-b2c1-98012c937774}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Renderer\Source">
-      <UniqueIdentifier>{cd10a164-c5d0-4c55-958e-44dbdc8fb07f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game\Headers">
       <UniqueIdentifier>{88d760ec-ffd1-4816-b393-fbed72a6dd64}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game\Source">
       <UniqueIdentifier>{697c8d35-5850-487e-9aa1-3922537f758a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{746cd515-46aa-43e9-994c-74d31b0de2b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Headers">
+      <UniqueIdentifier>{fd72bd73-bfc4-4421-b2c1-98012c937774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Source">
+      <UniqueIdentifier>{cd10a164-c5d0-4c55-958e-44dbdc8fb07f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Renderer">
+      <UniqueIdentifier>{f5244313-7736-413b-ae1c-f507ed77ee5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Light">
+      <UniqueIdentifier>{d2630d0b-57b7-4031-8a46-37b20d3a9b63}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -52,7 +58,7 @@
       <Filter>General</Filter>
     </ClInclude>
     <ClInclude Include="Renderer.h">
-      <Filter>Renderer</Filter>
+      <Filter>Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Vector.h">
       <Filter>Math\Headers</Filter>
@@ -73,10 +79,13 @@
       <Filter>Math\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Direct3DRenderer.h">
-      <Filter>Renderer\Headers</Filter>
+      <Filter>Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="headers.h">
       <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Graphics\Light</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -96,7 +105,7 @@
       <Filter>Game\Source</Filter>
     </ClCompile>
     <ClCompile Include="Direct3DRenderer.cpp">
-      <Filter>Renderer\Source</Filter>
+      <Filter>Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="game.cpp">
       <Filter>Game\Source</Filter>

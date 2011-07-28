@@ -16,6 +16,7 @@
     <ClInclude Include="engine.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="headers.h" />
+    <ClInclude Include="Light.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Matrix.h" />
@@ -59,7 +60,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)/../lib/</OutDir>
+    <OutDir>$(SolutionDir)/../lib</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

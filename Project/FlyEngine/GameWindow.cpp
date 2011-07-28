@@ -26,7 +26,7 @@ LRESULT WINAPI WindowProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 		Width = 800;
 		Height = 600;
 
-		Initialise();
+		//Initialise();
 	}
 
 	GameWindow::GameWindow(HINSTANCE hInst)
@@ -79,11 +79,13 @@ LRESULT WINAPI WindowProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 
 	void GameWindow::Shutdown() 
 	{
+		CloseWindow(hWnd);
 		UnregisterClass("FEGameWindow", wc.hInstance);
 	}
 
 	void GameWindow::ApplySettings()
 	{
+		SetWindowText(hWnd, Title);
 		MoveWindow(hWnd, X, Y, Width, Height, true);
 	}
 		

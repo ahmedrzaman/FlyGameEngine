@@ -3,7 +3,9 @@
 Game::Game()
 {
 	currentTime = lastTime = 0.0;
-	FramesPerSecond = 60;
+	GameSpeed = 60;
+	
+	Window.Initialise();
 }
 
 Game::~Game() 
@@ -19,6 +21,10 @@ void Game::Start()
 	Run();
 	// shutdown
 	Shutdown();
+}
+
+void Game::Initialise()
+{
 }
 
 void Game::Run()
@@ -45,18 +51,21 @@ void Game::Run()
 		}
 		else
 		{
+			currentTime = timeGetTime() - lastTime;
+
+			if (currentTime < GameSpeed)
+				return;
 
 			// game declarations
 			//UpdateFunction();
 			Update();
 			//RenderFunction();
 			Draw();
+
+			lastTime = timeGetTime();
 		}
 	}
 }
-
-void Game::Initialise()
-{ }
 
 void Game::LoadContent()
 { }
@@ -68,5 +77,6 @@ void Game::Draw()
 { }
 
 void Game::Shutdown()
-{
+{ 
+	Window.Shutdown();
 }

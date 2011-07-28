@@ -6,10 +6,7 @@
 
 class Renderer
 {
-public:
-	Renderer();
-	~Renderer();
-	
+protected:	
 	int BackBufferWidth;
 	int BackBufferHeight;
 
@@ -17,14 +14,17 @@ public:
 	float FarClippingPlane;
 
 	bool IsFullscreen;
+public:
+	Renderer();
+	virtual ~Renderer();
 	
-	void SetClearColour(float R, float G, float B);
-	void Clear(float R, float G, float B, float A);
-	void Clear(int R, int G, int B, int A);
+	virtual void SetClearColour(float R, float G, float B) = 0;
+	virtual void Clear(float R, float G, float B, float A) = 0;
+	virtual void Clear(int R, int G, int B, int A) = 0;
 
-	void StartRender(bool Colour, bool Depth, bool Stencil);
-	void ClearBuffers(bool Colour, bool Depth, bool Stencil);
-	void EndRendering();
+	virtual void StartRender(bool Colour, bool Depth, bool Stencil) = 0;
+	virtual void ClearBuffers(bool Colour, bool Depth, bool Stencil) = 0;
+	virtual void EndRendering() = 0;
 };
 
 #endif

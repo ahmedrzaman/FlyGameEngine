@@ -11,7 +11,6 @@
 class Game
 {
 private:
-    //WNDCLASSEX wc;
 
 	double currentTime, lastTime;
 		
@@ -19,13 +18,18 @@ private:
 	
 protected:
 	// GraphicsDeviceManager GraphicsManager
-	// GraphicsDevice GraphicsDevice
+
+	// Same as GraphicsDevice in XNA
+	Renderer * renderer;
+
+	// game window
+	GameWindow Window;
 
 	// Value indicating if the mouse is hidden or visible.
 	bool MouseIsVisible;
 
 	// Frames rendered every second. Default at 60
-	int FramesPerSecond;
+	int GameSpeed;
 	
 	// The game loop	
 	void Run();
