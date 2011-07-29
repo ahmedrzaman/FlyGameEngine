@@ -37,17 +37,14 @@
     <Filter Include="Graphics">
       <UniqueIdentifier>{746cd515-46aa-43e9-994c-74d31b0de2b2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Graphics\Headers">
-      <UniqueIdentifier>{fd72bd73-bfc4-4421-b2c1-98012c937774}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Graphics\Source">
-      <UniqueIdentifier>{cd10a164-c5d0-4c55-958e-44dbdc8fb07f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Graphics\Renderer">
       <UniqueIdentifier>{f5244313-7736-413b-ae1c-f507ed77ee5d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Graphics\Light">
       <UniqueIdentifier>{d2630d0b-57b7-4031-8a46-37b20d3a9b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Colour">
+      <UniqueIdentifier>{9dc08931-6746-45c7-9a7c-52dc4c0f630f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -56,9 +53,6 @@
     </ClInclude>
     <ClInclude Include="engine.h">
       <Filter>General</Filter>
-    </ClInclude>
-    <ClInclude Include="Renderer.h">
-      <Filter>Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Vector.h">
       <Filter>Math\Headers</Filter>
@@ -78,14 +72,20 @@
     <ClInclude Include="Rectangle.h">
       <Filter>Math\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Direct3DRenderer.h">
-      <Filter>Graphics\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="headers.h">
       <Filter>General</Filter>
     </ClInclude>
     <ClInclude Include="Light.h">
       <Filter>Graphics\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct3DRenderer.h">
+      <Filter>Graphics\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Graphics\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Colour.h">
+      <Filter>Graphics\Colour</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -104,11 +104,17 @@
     <ClCompile Include="GameWindow.cpp">
       <Filter>Game\Source</Filter>
     </ClCompile>
-    <ClCompile Include="Direct3DRenderer.cpp">
-      <Filter>Graphics\Source</Filter>
-    </ClCompile>
     <ClCompile Include="game.cpp">
       <Filter>Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct3DRenderer.cpp">
+      <Filter>Graphics\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Graphics\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Colour.cpp">
+      <Filter>Graphics\Colour</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

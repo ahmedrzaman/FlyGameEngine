@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Colour.h" />
     <ClInclude Include="Direct3DRenderer.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="engine.h" />
@@ -25,8 +26,10 @@
     <ClInclude Include="DrawableObject.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Colour.cpp" />
     <ClCompile Include="Direct3DRenderer.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="MathHelper.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="Matrix.cpp" />

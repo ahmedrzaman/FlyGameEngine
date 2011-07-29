@@ -2,7 +2,7 @@
 
 FlyEngineSample1::FlyEngineSample1()
 {
-
+	Window.FullScreen = true;
 }
 
 FlyEngineSample1::~FlyEngineSample1()

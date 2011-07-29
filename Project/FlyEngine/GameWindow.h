@@ -1,9 +1,11 @@
 #ifndef _FLYENGINE_GAMEWINDOW_H
 #define _FLYENGINE_GAMEWINDOW_H
 
-#include "Vector.h"
 #include <Windows.h>
 #include <ctime>
+
+#include "Vector.h"
+#include "headers.h"
 
 #pragma comment(lib, "winmm.lib")
 
@@ -13,12 +15,14 @@ private:
 	char * Title;
 	
 	HINSTANCE hInstance;
-	HWND hWnd;
+	FGE_HWND hWnd;
 	
     WNDCLASSEX wc;
-
 public:
 	int X, Y, Width, Height;
+	bool FullScreen;
+
+	friend class Game;
 	
 public:
 	GameWindow();

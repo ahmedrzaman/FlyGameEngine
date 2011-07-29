@@ -78,4 +78,41 @@ public:
 	void Normalize();
 };
 
+class Vector4 
+{
+public:
+	static const Vector4 One;
+	float X, Y, Z, W;
+
+	Vector4() : X(0), Y(0), Z(0), W(0) { }
+	Vector4(float x, float y, float z, float w) : X (x), Y(y), Z(z), W(w) { }
+	~Vector4() { }
+
+	// operators
+	Vector4 operator -(Vector4 &vector);
+	Vector4 operator +(Vector4 &vector);
+	Vector4 operator /(Vector4 &vector);
+	Vector4 operator *(Vector4 &vector);
+	Vector4 operator -(float amount);
+	Vector4 operator +(float amount);
+	Vector4 operator /(float amount);
+	Vector4 operator *(float amount);
+
+	Vector4 operator =(Vector4 &vector);
+	
+	void operator -=(Vector4 &vector);
+	void operator +=(Vector4 &vector);
+	void operator /=(Vector4 &vector);
+	void operator *=(Vector4 &vector);
+	void operator -=(float vector);
+	void operator +=(float vector);
+	void operator /=(float vector);
+	void operator *=(float vector);
+
+	bool operator ==(const Vector4 &vector) const;
+
+	float Length();
+	void Normalize();
+};
+
 #endif 

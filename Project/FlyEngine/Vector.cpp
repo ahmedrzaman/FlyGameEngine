@@ -13,7 +13,7 @@ Vector3	Vector3::operator +(Vector3 &vector)
 Vector3 Vector3::operator /(Vector3 &vector)
 {
 	return Vector3(X / vector.X, Y / vector.Y, Z / vector.Z);
-}
+} 
 Vector3 Vector3::operator *(Vector3 &vector)
 {
 	return Vector3(X * vector.X, Y * vector.Y, Z * vector.Z);
@@ -223,4 +223,138 @@ void Vector2::Normalize()
 
 	X = X / length;
 	Y = Y / length;
+}
+
+
+
+
+
+
+
+const Vector4 Vector4::One = Vector4(1, 1, 1, 1);
+
+Vector4 Vector4::operator -(Vector4 &vector)
+{
+	return Vector4(X - vector.X, Y - vector.Y, Z - vector.Z, W - vector.W);
+}
+Vector4	Vector4::operator +(Vector4 &vector)
+{
+	return Vector4(X + vector.X, Y + vector.Y, Z + vector.Z, W + vector.W);
+}
+Vector4 Vector4::operator /(Vector4 &vector)
+{
+	return Vector4(X / vector.X, Y / vector.Y, Z / vector.Z, W / vector.W);
+}
+Vector4 Vector4::operator *(Vector4 &vector)
+{
+	return Vector4(X * vector.X, Y * vector.Y, Z * vector.Z, W * vector.W);
+}
+Vector4 Vector4::operator -(float scaleFactor)
+{
+	return Vector4(X - scaleFactor, Y - scaleFactor, Z - scaleFactor, W - scaleFactor);
+}
+Vector4 Vector4::operator +(float scaleFactor)
+{
+	return Vector4(X + scaleFactor, Y + scaleFactor, Z + scaleFactor, W + scaleFactor);
+}
+Vector4 Vector4::operator /(float scaleFactor)
+{
+	return Vector4(X / scaleFactor, Y / scaleFactor, Z / scaleFactor, W / scaleFactor);
+}
+Vector4 Vector4::operator *(float scaleFactor)
+{
+	return Vector4(X * scaleFactor, Y * scaleFactor, Z * scaleFactor, W * scaleFactor);
+}
+	
+void Vector4::operator -=(Vector4 &vector)
+{
+	X -= vector.X;
+	Y -= vector.Y;
+	Z -= vector.Z;
+	W -= vector.W;
+}
+void Vector4::operator +=(Vector4 &vector)
+{
+	X += vector.X;
+	Y += vector.Y;
+	Z += vector.Z;
+	W += vector.W;
+}
+void Vector4::operator /=(Vector4 &vector)
+{
+	X /= vector.X;
+	Y /= vector.Y;
+	Z /= vector.Z;
+	W /= vector.W;
+}
+void Vector4::operator *=(Vector4 &vector)
+{
+	X *= vector.X;
+	Y *= vector.Y;
+	Z *= vector.Z;
+	W *= vector.W;
+}
+void Vector4::operator -=(float scaleFactor)
+{
+	X -= scaleFactor;
+	Y -= scaleFactor;
+	Z -= scaleFactor;
+	W -= scaleFactor;
+}
+void Vector4::operator +=(float scaleFactor)
+{
+	X += scaleFactor;
+	Y += scaleFactor;
+	Z += scaleFactor;
+	W += scaleFactor;
+}
+void Vector4::operator /=(float scaleFactor)
+{
+	X /= scaleFactor;
+	Y /= scaleFactor;
+	Z /= scaleFactor;
+	W /= scaleFactor;
+}
+void Vector4::operator *=(float scaleFactor)
+{
+	X *= scaleFactor;
+	Y *= scaleFactor;
+	Z *= scaleFactor;
+	W *= scaleFactor;
+}
+
+Vector4 Vector4::operator =(Vector4 &vector)
+{
+	return Vector4(vector.X, vector.Y, vector.Z, vector.W);
+}
+
+bool Vector4::operator ==(const Vector4 &vector) const
+{
+	if (X != vector.X)
+		return false;
+	if (Y != vector.Y)
+		return false;
+	if (Z != vector.Z)
+		return false;
+	if (W != vector.W)
+		return false;
+		
+	return true;
+}
+
+float Vector4::Length()
+{
+	return (float(sqrt((X * X) + (Y * Y) + (Z * Z) + (W * W))));
+}
+
+void Vector4::Normalize()
+{
+	float length = Length();
+
+	if (length == 0.0f) length = 1.0f;
+
+	X = X / length;
+	Y = Y / length;
+	Z = Z / length;
+	W = W / length;
 }

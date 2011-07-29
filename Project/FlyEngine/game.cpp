@@ -25,6 +25,7 @@ void Game::Start()
 
 void Game::Initialise()
 {
+	renderer->Initialise(Window.hWnd, Window.Width, Window.Height, Window.FullScreen);
 }
 
 void Game::Run()
