@@ -16,6 +16,9 @@ protected:
 	float FarClippingPlane;
 
 	bool FullScreen;
+	bool RenderingScene;
+
+	bool functionBeginCalled;
 
 	FGE_HWND mainWindowHandle;
 public:
@@ -30,9 +33,9 @@ public:
 	virtual void Clear(float R, float G, float B, float A) = 0;
 	virtual void Clear(int R, int G, int B, int A) = 0;
 
-	virtual void StartRender(bool Colour, bool Depth, bool Stencil) = 0;
+	virtual void Begin(bool Colour, bool Depth, bool Stencil) = 0;
 	virtual void ClearBuffers(bool Colour, bool Depth, bool Stencil) = 0;
-	virtual void EndRendering() = 0;
+	virtual void End() = 0;
 
 	virtual void ApplyView(Vector3 cameraPosition, Vector3 viewDirection, Vector3 upDirection) = 0;
 	virtual void SetWorldMatrix(Matrix * worldMatrix) = 0;

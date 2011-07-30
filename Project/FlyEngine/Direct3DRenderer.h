@@ -16,9 +16,6 @@ private:
 	D3DCOLOR ClearColour;
 
 	D3DXMATRIX projectionMatrix;
-	
-	void ShowMessage(char * title, char * message);
-
 public:
 	Direct3DRenderer();
 	~Direct3DRenderer();
@@ -31,9 +28,9 @@ public:
 	void Clear(float R, float G, float B, float A);
 	void Clear(int R, int G, int B, int A);
 
-	void StartRender(bool Colour, bool Depth, bool Stencil);
+	void Begin(bool Colour, bool Depth, bool Stencil);
 	void ClearBuffers(bool Colour, bool Depth, bool Stencil);
-	void EndRendering() = 0;
+	void End() = 0;
 
 	void ApplyView(Vector3 cameraPosition, Vector3 viewDirection, Vector3 upDirection);
 	void SetWorldMatrix(Matrix * worldMatrix);
@@ -45,6 +42,8 @@ public:
 	void CalculateOrthogonalMatrix(float near, float far);
 };
 
+
+void ShowMessage(char * title, char * message);
 
 
 #endif
